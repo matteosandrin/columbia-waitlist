@@ -74,9 +74,16 @@ p{
 	text-align:center;
 }
 
+.section0-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #section0 i {
     margin-top: 5%;
-    width: 100%;
+    /*width: 100%;*/
     vertical-align: bottom;
 }
 
@@ -90,7 +97,6 @@ p{
 
 #section0 img {
     width: 20%;
-    height: 20%;
     border-radius: 50%;
     border: 5px solid #ECF0F1;
 }
@@ -99,6 +105,7 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-flow:row wrap;
 }
 
 .section1-text-wrapper {

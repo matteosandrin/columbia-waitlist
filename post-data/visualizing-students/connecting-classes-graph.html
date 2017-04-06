@@ -117,10 +117,6 @@ function makeGraph(){
   var fileName = "json/data_mod" + mod.toString() + "_class" + year.toString() + ".json";
   console.log(fileName);
 
-
-
-
-
   d3.json(fileName, function(classes) {
 
     var nodes = cluster.nodes(packages.root(classes)),
@@ -154,21 +150,6 @@ function makeGraph(){
       line.tension(this.value / 100);
       path.attr("d", function(d, i) { return line(splines[i]); });
     });
-
-    
-
-    function repeat() {
-      delay = function(d, i) { return i * 500; };
-      svg.selectAll(".node")
-          .transition()
-          .duration(500)
-          .delay(delay)
-          .each("start",function (d) {console.log(d);mouseover(d)})
-          .each("end",function (d) {console.log(d);mouseout(d);});
-    }
-
-    repeat()
-    
 
   });
 

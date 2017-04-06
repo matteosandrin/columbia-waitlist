@@ -2,40 +2,27 @@
 <head>
 	<title>fullPage.js One Page Scroll Sites</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-				scrollingSpeed: 500,
-				navigation: true,
-				onLeave: function(index, nextIndex, direction) {
-					if (nextIndex == 2) {
-						document.getElementById('graph-frame').contentWindow.makeGraph();
-					}
-				}
-			});
-
-		});
-	</script>
+	<script type="text/javascript" src="js/index.js"></script>
 </head>
 	<body>
 		<div id="fullpage">
 			<div class="section" id="section0">
-				<div>
+				<div class="section0-wrapper">
 					<img src="img/profile.jpg">
 					<h1>Why should I accept this guy off the <span style="color: #349abc">Columbia</span> waitlist?</h1>
 					<p>I'm glad you asked.<br> Scroll down to find out!</p>
-				</div>				
-				<i class="fa fa-arrow-down fa-5x" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
+					<i class="fa fa-arrow-down fa-5x" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
+				</div>
 			</div>
 			<div class="section" id="section1">
 				<div class="section1-wrapper">
