@@ -1,0 +1,71 @@
+<head>
+	<style>
+		body {
+			width: 100%;
+			height: 100%;
+		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+
+		}
+
+/*		#chart text {
+		    fill: white !important;
+		    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+		}*/
+
+		.nvd3.nv-pie .nv-pie-title {
+			fill: #92001C;
+		}
+
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+	<link href="js/nv/nv.d3.css" rel="stylesheet">
+	<script src="js/nv/nv.d3.js"></script>
+	<script>
+
+	var w = window.innerWidth,
+	h = window.innerHeight;
+
+	//Donut chart example
+	nv.addGraph(function() {
+	  var chart = nv.models.pieChart()
+	      .x(function(d) { return d.label })
+	      .y(function(d) { return d.value })
+	      .showLabels(true)     //Display pie labels
+	      .labelThreshold(0.03)  //Configure the minimum slice size for labels to show up
+	      .labelType("key") //Configure what type of data to show in the label. Can be "key", "value" or "percent"
+	      .donut(true)          //Turn on Donut mode. Makes pie chart look tasty!
+	      .donutRatio(0.35)     //Configure how big you want the donut hole size to be.
+	      .color(["#B1103C","#781E36","#4A2932","#575C5D","#667172"])
+	      .labelSunbeamLayout(true)
+	      // .labelsOutside(true)
+	      .showLegend(false)
+	      .title("Classes by Total")
+	      ;
+
+	    // d3.select("#chart svg")
+	chart.tooltip.contentGenerator(function (d) { console.log(d);
+		return "<span style='font-size: 17px; padding:5px;'><b>" + d.data.label + ":</b> " + d.data.percent + "% (" + d.data.value + " classes)</span>";
+	});
+
+	    d3.json('json/class_pie_data.json',function(data){
+		  	d3.select("#chart svg")
+		  	.datum(data)
+		  	.attr('viewBox','0 0 '+w+' '+h)
+	        .transition().duration(350)
+	        .call(chart);	
+		});
+
+	  return chart;
+	});
+	
+	</script>
+</head>
+<body>
+	<div id="chart">
+		<svg></svg>
+	</div>
+</body>

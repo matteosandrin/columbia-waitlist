@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+	<title>fullPage.js One Page Scroll Sites</title>
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				scrollingSpeed: 500,
+				navigation: true,
+				onLeave: function(index, nextIndex, direction) {
+					if (nextIndex == 2) {
+						document.getElementById('graph-frame').contentWindow.makeGraph();
+					}
+				}
+			});
+
+		});
+	</script>
+</head>
+	<body>
+		<div id="fullpage">
+			<div class="section" id="section0">
+				<div>
+					<img src="img/profile.jpg">
+					<h1>Why should I accept this guy off the <span style="color: #349abc">Columbia</span> waitlist?</h1>
+					<p>I'm glad you asked.<br> Scroll down to find out!</p>
+				</div>				
+				<i class="fa fa-arrow-down fa-5x" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
+			</div>
+			<div class="section" id="section1">
+				<div class="section1-wrapper">
+					<iframe style="width:800px;height:800px;" src="/post-data/visualizing-students/connecting-classes-graph.html" frameBorder="0" class="graph-frame" id="graph-frame"></iframe>
+					<div class="section1-text-wrapper">
+						<h1>He builds incredibly pretty data visualizations</h1>
+						<p>For example, this a graph connecting students in my class based on which course they have taken together</p>
+					</div>
+				</div>
+			</div>
+			<div class="section" id="section2">
+				<div class="intro">
+					<h1>Example</h1>
+					<p>HTML markup example to define 4 sections.</p>
+				</div>
+			</div>
+			<div class="section" id="section3">
+				<div class="intro">
+					<h1>Working On Tablets</h1>
+					<p>
+						Designed to fit to different screen sizes as well as tablet and mobile devices.
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
