@@ -3,12 +3,7 @@ $(document).ready(function() {
 		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
 		scrollingSpeed: 500,
-		navigation: true,
-		onLeave: function(index, nextIndex, direction) {
-			if (nextIndex == 2) {
-				document.getElementById('graph-frame').contentWindow.makeGraph();
-			}
-		}
+		navigation: true
 	});
 
 });
