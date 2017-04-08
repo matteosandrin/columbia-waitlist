@@ -1,6 +1,31 @@
 @CHARSET "ISO-8859-1";
-/* Reset CSS
- * --------------------------------------- */
+
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('FuturaPTMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('FuturaPTMediumOblique.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('FuturaPTBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('DroidSerif-BoldItalic-webfont.ttf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
@@ -48,7 +73,7 @@ abbr,acronym { border: 0;
 /* Custom CSS
  * --------------------------------------- */
 body{
-	font-family: futura,arial,helvetica;
+	font-family: 'FuturaPT',futura,arial,helvetica;
 	color: #333;
 	color: rgba(0,0,0,0.5);
 }
@@ -93,22 +118,23 @@ p{
 
 #section0 h1 {
     color: #ECF0F1;
+    font-size: 4em;
 }
-#section0 p {
+/*#section0 p {
     margin-bottom: 25px;
-}
+}*/
 
 #section0 img {
-    width: 20%;
+    width: 15%;
     border-radius: 50%;
     border: 5px solid #ECF0F1;
 }
 
 .section1-wrapper {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    flex-flow:row wrap;
+    align-items: center;
+    flex-direction: row;
 }
 
 .section1-text-wrapper {
@@ -120,13 +146,30 @@ p{
 
 #section1 h1 {
     padding: 0% 10% 7%;
-    font-size: 3em;
+    font-size: 3.5em;
     color: #ECF0F1;
+}
+
+#section1 p {
+    font-size: 1.5em;
 }
 
 .graph-frame {
     width: 40%;
     min-width: 400px;
+}
+
+@media (orientation: portrait) {
+    .section1-wrapper {
+        flex-direction: column;
+    }
+    #section1 h1 {
+        padding: 0% 3% 7%;
+    }
+    .section1-text-wrapper {
+        width: 70%;
+        margin-bottom: 20px;
+    }
 }
 
 .section2-wrapper {
@@ -161,6 +204,59 @@ p{
 .section2-wrapper p span {
     background-color: #7BAABE;
     color: white;
-    padding: 0px 10px;
+    padding: 0px 10px 0px 0px;
+}
+
+@media (orientation: landscape) and (max-width: 1350px) {
+    .section2-wrapper h1 {
+        font-size: 4em;
+    }
+    .section2-wrapper p {
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+}
+
+.section3-wrapper {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center url(../img/lion.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.section3-wrapper h1 {
+    color: white;
+    padding: 30px 30px 15px 30px;
+    text-align: left;
+    margin-top: -70px;
+}
+
+.section3-description {
+    color: white;
+    padding: 30px 30px 15px 30px;
+    text-align: left;
+    width: 30%;
+    font-size: 1.5em;
+}
+
+.section3-footer {
+    width: 40%;
+    margin-top: auto;
+    font-size: 1em;
+    color: white;
+    text-align: left;
+    padding: 5px 5px;
+    opacity: 0.7;
+    margin-bottom: -70px;
+}
+
+.section3-arrow {
+    align-self: center;
+    color: white;
+    padding: 5px;
 }
 

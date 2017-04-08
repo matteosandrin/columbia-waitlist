@@ -23,7 +23,7 @@ path.arc {
 
 .link {
   fill: none;
-  stroke: #92001C;
+  stroke: #ECF0F1;
   stroke-opacity: .2;
   pointer-events: none;
 }
@@ -34,23 +34,25 @@ path.arc {
 }
 
 .node.target {
-  fill: #ECF0F1 !important;
+  fill: #444 !important;
 }
 
 .link.source {
-  stroke: #ECF0F1;
+  stroke: #444;
+  stroke-opacity: 0.5;
 }
 
 .node.source {
-  fill: #ECF0F1;
+  fill: #444;
 }
 
 .link.target {
-  stroke: #ECF0F1;
+  stroke: #444;
+  stroke-opacity: 0.5;
 }
 
 .node.source text {
-  fill: #ECF0F1;
+  fill: #444;
 }
 
 
@@ -136,7 +138,7 @@ function makeGraph(){
         .attr("dy", ".31em")
         .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
         .attr("transform", function(d) { return d.x < 180 ? null : "rotate(180)"; })
-        .attr("fill","rgba(0,0,0,0.5)")
+        .attr("fill","#ECF0F1")
         .style("font-size","10px")
         .text(function(d) { return d.label; })
         .on("mouseover", mouseover)
