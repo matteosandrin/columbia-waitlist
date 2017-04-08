@@ -83,8 +83,19 @@ p{
     color: white;
 }
 
+.arrow-white {
+    color: white;
+}
+
+ .arrow-white:hover {
+    color: #7BAABE;
+}
+
 #section0 h1 {
     color: #ECF0F1;
+}
+#section0 p {
+    margin-bottom: 25px;
 }
 
 #section0 img {
@@ -117,3 +128,39 @@ p{
     width: 40%;
     min-width: 400px;
 }
+
+.section2-wrapper {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center url(../img/columbia-background.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2-wrapper h1 {
+    color: white;
+    font-size: 6em;
+}
+
+.section2-wrapper h1 span {
+    background-color: #7BAABE;
+    color: white;
+    padding: 0px 10px;
+}
+
+.section2-wrapper p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    /*background-color: rgba(123, 170, 190, 0.5);*/
+}
+
+.section2-wrapper p span {
+    background-color: #7BAABE;
+    color: white;
+    padding: 0px 10px;
+}
+
