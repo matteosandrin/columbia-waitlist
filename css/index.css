@@ -130,6 +130,19 @@ p{
     border: 5px solid #ECF0F1;
 }
 
+@media (orientation: landscape) and (max-height: 720px) {
+    #section0 h1 {
+        font-size: 3em;
+    }
+    #section0 img {
+        width: 13%;
+        border: 2px solid #ECF0F1;
+    }
+    #section0 p {
+        font-size: 1.5em;
+    }
+}
+
 .section1-wrapper {
     display: flex;
     justify-content: center;
@@ -156,7 +169,14 @@ p{
 
 .graph-frame {
     width: 40%;
-    min-width: 400px;
+    /*min-width: 400px;*/   
+}
+
+@media (orientation: landscape) and (max-height: 720px) {
+   .graph-frame {
+        width: 30%;
+        /*min-width: 400px;*/   
+    } 
 }
 
 @media (orientation: portrait) {
