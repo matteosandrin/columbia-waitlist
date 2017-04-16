@@ -1,10 +1,24 @@
 <head>
 	<script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
+	<script src='../../js/soda-js.bundle.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
+	<script type="text/javascript" src="../../js/polyline.js"></script>
+	<script type="text/javascript" src="../../js/moment.min.js"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXyvqpLIpo79T7lzF7blNT3rT04Rx6RBg"></script> -->
+	<script src='https://npmcdn.com/@turf/turf/turf.min.js'></script> 
+	<script src="../../js/jquery.min.js"></script>
 	<link href='taxis.css' rel='stylesheet' />
 </head>
 <body>
 	<div id='map'></div>
+
+	<div class='map-overlay top'>
+		<div class='map-overlay-inner'>
+			<h2 class="display-time"></h2>
+		</div>
+	</div>
+
+	<!-- <div><span class="display-time"></span></div> -->
 </body>
 
-<script src="taxis.js"></script>
+<script src="taxis-columbia.js"></script>

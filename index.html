@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>fullPage.js One Page Scroll Sites</title>
+	<title>From waitlist to greatlist</title>
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
 	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
@@ -14,8 +14,8 @@
 </head>
 	<body>
 		<div id="fullpage">
-			<div class="section" id="section0">
-				<div class="section0-wrapper">
+			<div class="section" id="section-welcome">
+				<div class="section-welcome-wrapper">
 					<img src="img/profile.jpg">
 					<p style="padding: 20px 60px 0px 60px;">My list of things I should have actually included in my application, or as I like to call it:</p>
 					<h1>"Why you should admit me from the <span style="color: #349abc; background-color: white; padding: 0px 5px;">Columbia</span> waitlist"</h1>
@@ -23,44 +23,53 @@
 					<i class="fa fa-arrow-down fa-4x arrow" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
 				</div>
 			</div>
-			<div class="section" id="section1">
-				<i class="fa fa-arrow-up fa-4x arrow" aria-hidden="true" onclick="$.fn.fullpage.moveSectionUp();"></i>
-				<div class="section1-wrapper">
-					<!-- <iframe style="width:800px;height:800px;" src="post-data/visualizing-students/connecting-classes-graph.html"
-					frameBorder="0" class="graph-frame" id="graph-frame"></iframe> -->
+			<div class="section" id="section-data">
+				<div class="section-data-wrapper">
 					<script type="text/javascript">
 					$(document).ready(function(){
 						$('.graph-frame').load("post-data/visualizing-students/connecting-classes-graph.html");
 					});
 					</script>
 					<div class="graph-frame"></div>
-					<div class="section1-text-wrapper">
+					<div class="section-data-text-wrapper">
 						<h1>I build gorgeous data visualization projects</h1>
-						<p>For example, this a graph connecting students in my class based on which courses they have taken together.</p>
-						<p>If you click a name, the graph highlights the all the people that student has had classes with</p>
+						<p>I personally harvested this precious data for days; I sent Google Surveys to all my fellow seniors asking who they had been in classes with this year, and followed up with each one of them. I then poured the block of data onto this beautiful graph. If you click a name, you can see what I'm talking about.</p>
 					</div>
 				</div>
 				<i class="fa fa-arrow-down fa-4x arrow" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
 			</div>
-			<div class="section" id="section2">
-				<div class="section2-wrapper">
-					<i class="fa fa-arrow-up fa-4x arrow-white" aria-hidden="true" onclick="$.fn.fullpage.moveSectionUp();"></i>
+			<div class="section" id="section-columbia">
+				<div class="section-columbia-wrapper">
 					<h1><span>I got into a love triangle with <span style="">Columbia</span> and <span style="">NYC</span><span style="color: #955E83; margin-left: -25px; margin-right: -25px; background-color: transparent">*</span></span></h1>
 					<p><span><span style="color: #955E83;margin-right: -10px; margin-left: 5px;">*</span>I lived in Furnald Hall while attending Columbia's summer program,<br>and I fell in love with both the campus and the city</span></p>
-					<i class="fa fa-arrow-down fa-4x arrow-white" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
+					<i class="fa fa-arrow-down fa-4x arrow-white section-columbia-arrow-down" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
 				</div>
 			</div>
-			<div class="section" id="section3">
-				<div class="section3-wrapper">
-					<i class="fa fa-arrow-up fa-4x section3-arrow" aria-hidden="true" onclick="$.fn.fullpage.moveSectionUp();"></i>
+			<div class="section" id="section-photography">
+				<div class="section-photography-wrapper">
 					<h1>This is not a stock photo,<br>I shot this picture.</h1>
-					<p class="section3-description">I shot the picture of the Butler library from earlier, too.
+					<p class="section-photography-description">I shot the picture of the Butler library from earlier, too.
 					Photography is something I'm extremely passionate about, so I like to think I'm pretty good at it.</p>
-					<p class="section3-footer">P.S. I shot this on the 31st of December 2016, inside the Ngorongoro crater.<br>
+					<p class="section-photography-footer">P.S. I shot this on the 31st of December 2016, inside the Ngorongoro crater.<br>
 					The lion did <b>not</b> wake up while I was taking its picture.</p>
-					<i class="fa fa-arrow-down fa-4x section3-arrow" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
+					<i class="fa fa-arrow-down fa-4x section-photography-arrow" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
+				</div>
+			</div>
+			<div class="section" id="section-attend">
+				<div class="section-attend-wrapper">
+					<h1>I'll be in the class of 2021 before you can say the word "admitted"</h1>
+					<p>If I end up with an offer from Columbia, I'm going to accept it in a heartbeat, because I truly believe it's the place I am most suited for.</p>
 				</div>
 			</div>
 		</div>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+

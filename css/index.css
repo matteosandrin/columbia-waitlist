@@ -32,7 +32,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
     margin: 0;
 }
 a{
-	text-decoration:none;
+	color: rgba(0,0,0,0.6);
 }
 table {
     border-spacing: 0;
@@ -94,51 +94,51 @@ body{
 	text-align:center;
 }
 
-.section0-wrapper {
+.section-welcome-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.section0-wrapper h1 {
+.section-welcome-wrapper h1 {
     font-size: 8vmin;
-    padding: 3% 15%;
+    padding: 2% 15%;
     height: 15%;
     color: #ECF0F1;
 }
 
-.section0-wrapper p {
+.section-welcome-wrapper p {
     font-size: 4vmin;
 }
 
-#section0 img {
-    width: 30vmin;
+#section-welcome img {
+    width: 25vmin;
     border-radius: 50%;
     border: 5px solid #ECF0F1;
 }
 
-.section1-wrapper {
+.section-data-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
-.section1-text-wrapper {
+.section-data-text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 40%;
 }
 
-#section1 h1 {
+#section-data h1 {
     padding: 0% 10% 7%;
     font-size: 8vmin;
     color: #ECF0F1;
 }
 
-#section1 p {
+#section-data p {
     font-size: 3vmin;
 }
 
@@ -149,19 +149,19 @@ body{
 }   
 
 @media (orientation: portrait) {
-    .section1-wrapper {
+    .section-data-wrapper {
         flex-direction: column;
     }
-    #section1 h1 {
+    #section-data h1 {
         padding: 0% 3% 7%;
     }
-    .section1-text-wrapper {
+    .section-data-text-wrapper {
         width: 70%;
         margin-bottom: 0.025%;
     }
 }
 
-.section2-wrapper {
+.section-columbia-wrapper {
     width: 100%;
     height: 100%;
     background: no-repeat center url(../img/columbia-background.jpg);
@@ -172,18 +172,19 @@ body{
     align-items: center;
 }
 
-.section2-wrapper h1 {
+.section-columbia-wrapper h1 {
     color: white;
     font-size: 12vmin;
+    line-height: 20vmin;
 }
 
-.section2-wrapper h1 span {
+.section-columbia-wrapper h1 span {
     background-color: #7BAABE;
     color: white;
     padding: 0px 10px;
 }
 
-.section2-wrapper p {
+.section-columbia-wrapper p {
     margin-top: 50px;
     margin-bottom: 50px;
     width: 100%;
@@ -191,23 +192,24 @@ body{
     /*background-color: rgba(123, 170, 190, 0.5);*/
 }
 
-.section2-wrapper p span {
+.section-columbia-wrapper p span {
     background-color: #7BAABE;
     color: white;
     padding: 0px 10px 0px 0px;
 }
 
+
 @media (orientation: landscape) and (max-width: 1350px) {
-    .section2-wrapper h1 {
+    .section-columbia-wrapper h1 {
         font-size: 4em;
     }
-    .section2-wrapper p {
+    .section-columbia-wrapper p {
         margin-top: 20px;
         font-size: 1.5em;
     }
 }
 
-.section3-wrapper {
+.section-photography-wrapper {
     width: 100%;
     height: 100%;
     background: no-repeat center url(../img/lion.jpg);
@@ -218,15 +220,15 @@ body{
     align-items: flex-start;
 }
 
-.section3-wrapper h1 {
+.section-photography-wrapper h1 {
     color: white;
     padding: 30px 30px 15px 30px;
     text-align: left;
-    margin-top: -70px;
+    /*margin-top: -70px;*/
     font-size: 8vmin;
 }
 
-.section3-description {
+.section-photography-description {
     color: white;
     padding: 30px 30px 15px 30px;
     text-align: left;
@@ -234,7 +236,7 @@ body{
     font-size: 3vmin;
 }
 
-.section3-footer {
+.section-photography-footer {
     width: 40%;
     margin-top: auto;
     font-size: 2vmin;
@@ -245,9 +247,28 @@ body{
     margin-bottom: -70px;
 }
 
-.section3-arrow {
+.section-photography-arrow {
     align-self: center;
     color: white;
     padding: 5px;
+}
+
+.section-attend-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-attend-wrapper h1 {
+    color: white;
+    font-size: 12vmin;
+    padding: 0% 10%;
+}
+
+.section-attend-wrapper p {
+    color: rgba(255,255,255,0.5);
+    font-size: 4vmin;
+    padding: 3% 10%;
 }
 
