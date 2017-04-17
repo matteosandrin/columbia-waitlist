@@ -4,13 +4,15 @@ var sw_corner = [-73.980107, 40.799757]; // [longitude, latitude]
 var ne_corner = [-73.943775, 40.815293]; // [longitude, latitude]
 var columbia_center = [-73.961906,40.808210];
 var columbia_map_bounds = [sw_corner,ne_corner];
-var delta = 60 * 60;
-var delete_after_frames = 120;
+var real_seconds_per_frame = 5;
+var delta = 60 * 60 / real_seconds_per_frame;
+var delete_after_frames = 25;
 var dot_radius = 15;
 var now = moment().year(2015);
-var then = moment().year(2015).add(delta, 'seconds');
+var then = moment().year(2015).add(delta * real_seconds_per_frame, 'seconds');
 var realTime = now;
-$(".display-time").text(realTime.format("MMMM Do YYYY, h:mm a"));
+$(".display-date").text(realTime.format("MMMM Do YYYY"));
+$(".display-time").text(realTime.format("h:mm a"));
 
 var frames = Array.apply(null, Array(delta));
 
@@ -119,11 +121,11 @@ function drawRows(rows){
 			var color = '#FF0';
 			if (kind == 'dropoff') { color = '#F00'};
 			var spread = calcSpread(now,moment(time));
-			var id_num = makeid(8); // make up a method to generate random strings
+			var id_num = makeid(8);
 
 			if (spread > 0) {
 				
-				var frame_index = Math.round(spread / 1000);
+				var frame_index = Math.round(Math.round(spread / 1000) / real_seconds_per_frame);
 				console.log(frame_index);
 				if (frames[frame_index] == null) { frames[frame_index] = [];};
 				frames[frame_index].push({
@@ -171,7 +173,7 @@ function drawRows(rows){
 }
 
 var counter = 0;
-var fps = 30;
+var fps = 15;
 var fps_now = 0;
 var fps_then = moment();
 var fps_interval = 1000/fps;
@@ -186,16 +188,22 @@ function animate() {
 
 		if (counter < delta) {
 
-			console.log("displaying frame: " + counter);
+			
 
 			fps_then = moment(fps_now.valueOf() - (fps_delta % fps_interval));
 
-			realTime = realTime.add(1,'seconds');
-			$(".display-time").text(realTime.format("MMMM Do YYYY, h:mm a"));
+			realTime = realTime.add(real_seconds_per_frame,'seconds');
+			$(".display-time").text(realTime.format("h:mm a"));
 
 			var frame = frames[counter];
 
+
+
 			if (frame != undefined) {
+
+				console.log("displaying frame: " + counter);
+				console.log("  # of events in frame: " + frame.length);
+
 				frame.forEach(function (e, index) {
 					if (e.kind == 'delete') {
 						map.removeLayer(e.id_num);

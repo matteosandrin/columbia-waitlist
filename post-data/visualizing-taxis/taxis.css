@@ -18,10 +18,19 @@ body {
     background-color: #fff;
     border-radius: 2vmin;
     padding: 2vmin;
+    font-family: 'FuturaPT',futura,arial,helvetica;
 }
 
-.map-overlay h2 {
+.display-time {
     display: block;
     margin: 0px;
-    font-family: 'FuturaPT',futura,arial,helvetica;
+    font-weight: bold;
+    font-size: 7vmin;
+}
+
+.display-date {
+    display: block;
+    margin: 0px;
+    font-weight: normal;
+    font-size: 2vmin;
 }
