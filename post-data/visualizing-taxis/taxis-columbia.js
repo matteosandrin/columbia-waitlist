@@ -10,11 +10,13 @@ var delete_after_frames = 25;
 var dot_radius = 15;
 var now = moment().year(2015);
 var then = moment().year(2015).add(delta * real_seconds_per_frame, 'seconds');
-var realTime = now;
+var realTime = moment(now.valueOf());
 $(".display-date").text(realTime.format("MMMM Do YYYY"));
 $(".display-time").text(realTime.format("h:mm a"));
+$(".display-status").text("Downloading tiles from Mapbox...");
 
 var frames = Array.apply(null, Array(delta));
+var activePoints = [];
 
 point = {
 			"type": "FeatureCollection",
@@ -38,6 +40,8 @@ var map = new mapboxgl.Map({
 		});
 
 map.on('load', function () {
+
+	$(".display-status").text("Downloading taxi trips from NYC Open Data...");
 
 	var consumer = new soda.Consumer('data.cityofnewyork.us',{ apiToken: "QwAD6jBHYouRDiYnlIiTQ2irh" });
 
@@ -69,6 +73,8 @@ function drawRows(rows){
 	console.log(rows);
 	console.log("Total # of taxis: " + rows.length);
 	rows.forEach(function (row, index) {
+
+		// $(".display-status").text("Crunching taxi trip " + (index + 1));
 		
 		var pickup_pos = [row.pickup_longitude, row.pickup_latitude];
 		var dropoff_pos = [row.dropoff_longitude, row.dropoff_latitude];
@@ -90,7 +96,7 @@ function drawRows(rows){
 
 			var frame_to_delete_index = frame_index + delete_after_frames;
 
-			if (frame_to_delete_index > delta) { frame_to_delete_index = delta };
+			if (frame_to_delete_index >= delta) { frame_to_delete_index = delta - 1 };
 
 			for (var i = 0; i < delete_after_frames; i++) {
 				
@@ -123,7 +129,7 @@ function drawRows(rows){
 			var spread = calcSpread(now,moment(time));
 			var id_num = makeid(8);
 
-			if (spread > 0) {
+			if (spread > 0 && spread <= delta * real_seconds_per_frame * 1000) {
 				
 				var frame_index = Math.round(Math.round(spread / 1000) / real_seconds_per_frame);
 				console.log(frame_index);
@@ -169,6 +175,8 @@ function drawRows(rows){
 	console.log(frames)
 
 	requestAnimationFrame(animate);
+	$(".loading-container").css('opacity',0);
+	$(".map-overlay").css('opacity',1);
 
 }
 
@@ -188,16 +196,12 @@ function animate() {
 
 		if (counter < delta) {
 
-			
-
 			fps_then = moment(fps_now.valueOf() - (fps_delta % fps_interval));
 
-			realTime = realTime.add(real_seconds_per_frame,'seconds');
+			realTime.add(real_seconds_per_frame,'seconds');
 			$(".display-time").text(realTime.format("h:mm a"));
 
 			var frame = frames[counter];
-
-
 
 			if (frame != undefined) {
 
@@ -206,8 +210,12 @@ function animate() {
 
 				frame.forEach(function (e, index) {
 					if (e.kind == 'delete') {
-						map.removeLayer(e.id_num);
-						map.removeSource(e.id_num);
+						try {
+							map.removeLayer(e.id_num);
+							map.removeSource(e.id_num);
+						} catch(error) {
+							console.log("Failed to delete layer: " + e.id_num);
+						}
 					} else if (e.kind == 'pickup' || e.kind == 'dropoff') {
 
 						point.features[0].geometry.coordinates = e.coordinates;
@@ -243,6 +251,10 @@ function animate() {
 			}
 
 			counter++;
+		} else {
+			$(".replay-button").css('opacity',1);
+			$(".replay-button").css('cursor','pointer');
+			$(".replay-button").removeAttr('disabled');
 		}
 
 	}
@@ -260,6 +272,16 @@ function makeid(len)
 		text += possible.charAt(Math.floor(Math.random() * possible.length));
 
 	return text;
+}
+
+function replay() {
+	$(".replay-button").css('opacity',0);
+	$(".replay-button").css('cursor','initial');
+	$(".replay-button").prop('disabled', true);
+	counter = 0;
+	fps_then = moment();
+	realTime = moment(now.valueOf());
+	requestAnimationFrame(animate);
 }
 
 

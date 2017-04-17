@@ -12,13 +12,14 @@ body {
     top: 0;
     left: 0;
     padding: 2vmin;
+    font-family: 'FuturaPT',futura,arial,helvetica;
+    opacity: 0;
 }
 
 .map-overlay .map-overlay-inner {
     background-color: #fff;
     border-radius: 2vmin;
     padding: 2vmin;
-    font-family: 'FuturaPT',futura,arial,helvetica;
 }
 
 .display-time {
@@ -33,4 +34,52 @@ body {
     margin: 0px;
     font-weight: normal;
     font-size: 2vmin;
+}
+
+.loading-container {
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'FuturaPT',futura,arial,helvetica;
+}
+
+.display-status {
+	font-size: 3vmin;
+	color: rgba(255,255,255,0.3);
+}
+
+.replay-button {
+	text-align: center;
+	margin: auto;
+	padding: 3vmin;
+	font-size: 4vmin;
+	border-radius: 2vmin;
+	border: 2px solid white;
+	color: white;
+	background-color: rgba(20,20,20,1);
+	opacity: 0;
+	font-family: 'FuturaPT',futura,arial,helvetica;
+}
+
+.replay-button:hover {
+	background-color: rgba(100,100,100,1);
+}
+
+.replay-button-container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }

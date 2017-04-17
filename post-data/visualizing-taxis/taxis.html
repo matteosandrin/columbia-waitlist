@@ -7,7 +7,8 @@
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXyvqpLIpo79T7lzF7blNT3rT04Rx6RBg"></script> -->
 	<script src='https://npmcdn.com/@turf/turf/turf.min.js'></script> 
 	<script src="../../js/jquery.min.js"></script>
-	<link href='taxis.css' rel='stylesheet' />
+	<link rel='stylesheet' type="text/css" href='taxis.css' />
+	<link rel="stylesheet" type="text/css" href="double-bounce.css">
 </head>
 <body>
 	<div id='map'></div>
@@ -17,6 +18,18 @@
 			<span class="display-date"></span>
 			<h2 class="display-time"></h2>
 		</div>
+	</div>
+
+	<div class="loading-container">
+		<div class="sk-double-bounce">
+			<div class="sk-child sk-double-bounce1"></div>
+			<div class="sk-child sk-double-bounce2"></div>
+		</div>
+		<div class="display-status"></div>
+	</div>
+
+	<div class="replay-button-container">
+		<button class="replay-button" onclick="replay()" disabled>Replay</button>
 	</div>
 
 	<!-- <div><span class="display-time"></span></div> -->
