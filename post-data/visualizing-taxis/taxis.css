@@ -5,6 +5,15 @@ body {
 #map {
 	width: 100%;
 	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.mapboxgl-canvas {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 }
 
 .map-overlay {
@@ -16,10 +25,29 @@ body {
     opacity: 0;
 }
 
-.map-overlay .map-overlay-inner {
-    background-color: #fff;
+.tally-overlay, .time-overlay {
+    background-color: rgba(0,0,0,0.5);
     border-radius: 2vmin;
     padding: 2vmin;
+    color: white;
+}
+
+.tally-overlay {
+	margin-top: 2vmin;
+}
+
+.display-pickups, .display-dropoffs {
+	display: block;
+	color: white;
+	font-size: 4vmin;
+}
+
+.display-pickups {
+	color: #D73224;
+}
+
+.display-dropoffs {
+	color: #3778FA;
 }
 
 .display-time {
@@ -58,7 +86,7 @@ body {
 .replay-button {
 	text-align: center;
 	margin: auto;
-	padding: 3vmin;
+	padding: 2vmin;
 	font-size: 4vmin;
 	border-radius: 2vmin;
 	border: 2px solid white;
@@ -66,6 +94,7 @@ body {
 	background-color: rgba(20,20,20,1);
 	opacity: 0;
 	font-family: 'FuturaPT',futura,arial,helvetica;
+	width: 20vmin;
 }
 
 .replay-button:hover {

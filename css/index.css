@@ -94,6 +94,8 @@ body{
 	text-align:center;
 }
 
+/*  SECTION-WELCOME */
+
 .section-welcome-wrapper {
     display: flex;
     flex-direction: column;
@@ -117,6 +119,8 @@ body{
     border-radius: 50%;
     border: 5px solid #ECF0F1;
 }
+
+/*  SECTION-DATA */
 
 .section-data-wrapper {
     display: flex;
@@ -160,6 +164,8 @@ body{
         margin-bottom: 0.025%;
     }
 }
+
+/*  SECTION-COLUMBIA */
 
 .section-columbia-wrapper {
     width: 100%;
@@ -209,6 +215,41 @@ body{
     }
 }
 
+/*  SECTION-TAXIS */
+
+.section-taxis-wrapper, .taxis-map-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.section-taxis-column {
+    position: absolute;
+    bottom: 5vmin;
+    right: 7vmin;
+    color: white;
+    height: 100%;
+    width: 60vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.section-taxis-column-title {
+    font-size: 6vmin;
+    line-height: 7vmin;
+    padding: 2vmin 0px;
+}
+
+.section-taxis-column-description {
+    color: white;
+    font-size: 3vmin;
+    padding: 2vmin 0px;
+    /*text-align: left;*/
+}
+
+/*  SECTION-PHOTOGRAPHY */
+
 .section-photography-wrapper {
     width: 100%;
     height: 100%;
@@ -224,7 +265,6 @@ body{
     color: white;
     padding: 30px 30px 15px 30px;
     text-align: left;
-    /*margin-top: -70px;*/
     font-size: 8vmin;
 }
 
@@ -241,9 +281,9 @@ body{
     margin-top: auto;
     font-size: 2vmin;
     color: white;
-    text-align: left;
+    text-align: right;
+    align-self: flex-end;
     padding: 5px 5px;
-    opacity: 0.7;
     margin-bottom: -70px;
 }
 
@@ -252,6 +292,84 @@ body{
     color: white;
     padding: 5px;
 }
+
+/*  SECTION-TRAVEL */
+
+.section-travel-wrapper {
+    width: 100%;
+    height: 100%;
+    background: no-repeat top url(../img/tokyo-background.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;    
+}
+
+.section-travel-wrapper h1 {
+    color: white;
+    padding: 30px 30px 15px 30px;
+    text-align: left;
+    /*margin-top: -70px;*/
+    width: 40%;
+    font-size: 8vmin;
+}
+
+.section-travel-description {
+    color: white;
+    padding: 30px 30px 15px 30px;
+    text-align: left;
+    width: 30%;
+    font-size: 3vmin;
+}
+
+.section-travel-footer {
+    width: 40%;
+    margin-top: auto;
+    font-size: 2vmin;
+    color: white;
+    text-align: right;
+    align-self: flex-end;
+    padding: 5px 5px;
+    margin-bottom: -70px;
+}
+
+.section-travel-arrow {
+    align-self: center;
+    color: white;
+    padding: 5px;
+}
+
+/*  SECTION-SITE */
+
+.section-site-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-site-wrapper h1 {
+    color: white;
+    font-size: 15vmin;
+    padding: 0% 10%;
+}
+
+.section-site-wrapper p {
+    color: rgba(255,255,255,0.7);
+    font-size: 4vmin;
+    padding: 3% 10%;
+}
+
+.section-site-arrow-down {
+    color: rgba(255,255,255,0.7);
+}
+
+.section-site-arrow-down:hover {
+    color: white;
+}
+
+/*  SECTION-ATTEND */
 
 .section-attend-wrapper {
     display: flex;
@@ -262,13 +380,14 @@ body{
 
 .section-attend-wrapper h1 {
     color: white;
-    font-size: 12vmin;
+    font-size: 10vmin;
     padding: 0% 10%;
 }
 
 .section-attend-wrapper p {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.7);
     font-size: 4vmin;
     padding: 3% 10%;
+    padding-bottom: 0%;
 }
 

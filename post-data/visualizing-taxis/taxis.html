@@ -1,22 +1,24 @@
 <head>
-	<script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
-	<script src='../../js/soda-js.bundle.js'></script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
-	<script type="text/javascript" src="../../js/polyline.js"></script>
-	<script type="text/javascript" src="../../js/moment.min.js"></script>
+	<script src='js/soda-js.bundle.js'></script>
+	<script type="text/javascript" src="js/polyline.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXyvqpLIpo79T7lzF7blNT3rT04Rx6RBg"></script> -->
 	<script src='https://npmcdn.com/@turf/turf/turf.min.js'></script> 
-	<script src="../../js/jquery.min.js"></script>
-	<link rel='stylesheet' type="text/css" href='taxis.css' />
-	<link rel="stylesheet" type="text/css" href="double-bounce.css">
+	
+	<link rel='stylesheet' type="text/css" href='post-data/visualizing-taxis/taxis.css'/>
+	<link rel="stylesheet" type="text/css" href="post-data/visualizing-taxis/double-bounce.css">
 </head>
 <body>
 	<div id='map'></div>
 
-	<div class='map-overlay top'>
-		<div class='map-overlay-inner'>
+	<div class='map-overlay'>
+		<div class='time-overlay'>
 			<span class="display-date"></span>
-			<h2 class="display-time"></h2>
+			<span class="display-time"></span>
+		</div>
+		<div class='tally-overlay'>
+			<span class="display-pickups">0 pickups</span>
+			<span class="display-dropoffs">0 dropoffs</span>
 		</div>
 	</div>
 
@@ -32,7 +34,6 @@
 		<button class="replay-button" onclick="replay()" disabled>Replay</button>
 	</div>
 
-	<!-- <div><span class="display-time"></span></div> -->
 </body>
 
-<script src="taxis-columbia.js"></script>
+<script src="post-data/visualizing-taxis/taxis-columbia.js"></script>
