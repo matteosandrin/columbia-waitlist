@@ -388,6 +388,38 @@ body{
     color: rgba(255,255,255,0.7);
     font-size: 4vmin;
     padding: 3% 10%;
-    padding-bottom: 0%;
+}
+
+/*SECTION-FINALE*/
+
+.section-finale-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.section-finale-wrapper h1 {
+    color: white;
+    font-size: 17vmin;
+    padding: 0% 10%;
+}
+
+.section-finale-wrapper p {
+    color: rgba(255,255,255,0.7);
+    font-size: 4vmin;
+    padding: 3% 10%;
+}
+
+.section-finale-footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 4vmin;
+    padding: 3% 0%;
 }
 
