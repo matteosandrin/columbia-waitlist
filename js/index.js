@@ -26,7 +26,3 @@ $(document).ready(function(){
 	$('.graph-frame').load("post-data/visualizing-students/connecting-classes-graph.html");
 	$('.taxis-map-wrapper').load("post-data/visualizing-taxis/taxis.html");
 });
-
-var xhr = new XMLHttpRequest();
-xhr.open('GET', "https://maker.ifttt.com/trigger/new_visit/with/key/buKMasUlmJA1ngp_M-TdXR", true);
-xhr.send();

@@ -172,47 +172,42 @@ body{
     height: 100%;
     background: no-repeat center url(../img/columbia-background.jpg);
     background-size: cover;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start; 
 }
 
 .section-columbia-wrapper h1 {
-    color: white;
-    font-size: 12vmin;
-    line-height: 20vmin;
+    font-size: 8vmin;
+    padding: 3vmin 3vmin 1.5vmin 3vmin;
+    width: 40%
 }
 
 .section-columbia-wrapper h1 span {
-    background-color: #7BAABE;
+    background-color: rgba(123, 170, 190, 0.9);
     color: white;
     padding: 0px 10px;
 }
 
 .section-columbia-wrapper p {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 100%;
+    padding: 1.5vmin 3vmin 3.0vmin 3vmin;
+    width: 40%;
     font-size: 4vmin;
-    /*background-color: rgba(123, 170, 190, 0.5);*/
+    margin-bottom: -8vmin;  
 }
 
 .section-columbia-wrapper p span {
-    background-color: #7BAABE;
+    background-color: rgba(123, 170, 190, 0.9);
     color: white;
     padding: 0px 10px 0px 0px;
 }
 
-
-@media (orientation: landscape) and (max-width: 1350px) {
-    .section-columbia-wrapper h1 {
-        font-size: 4em;
-    }
-    .section-columbia-wrapper p {
-        margin-top: 20px;
-        font-size: 1.5em;
-    }
+.section-columbia-arrow {
+    align-self: center;
+    color: white;
+    padding: 5px;
 }
 
 /*  SECTION-TAXIS */
@@ -338,6 +333,10 @@ body{
     align-self: center;
     color: white;
     padding: 5px;
+}
+
+.section-travel-wrapper a {
+    color: white;
 }
 
 /*  SECTION-SITE */

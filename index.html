@@ -37,9 +37,9 @@
 			</div>
 			<div class="section" id="section-columbia">
 				<div class="section-columbia-wrapper">
-					<h1><span style="color: #79AABF; background-color: white; padding: 0px 5px;">because</span><span> I got into a love triangle with <span style="">Columbia</span> and <span style="">NYC</span><span style="color: #955E83; margin-left: -25px; margin-right: -25px; background-color: transparent">*</span></span></h1>
-					<p><span><span style="color: #955E83;margin-right: -10px; margin-left: 5px;">*</span>I lived in Furnald Hall while attending Columbia's summer program,<br>and I fell in love with both the campus and the city</span></p>
-					<i class="fa fa-arrow-down fa-4x arrow-white section-columbia-arrow-down" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
+					<h1><span style="color: #79AABF; background-color: white; padding: 0px 5px;">because</span><span> I got into a love triangle with Columbia and NYC</span></h1>
+					<p><span>I lived in Furnald Hall while attending Columbia's summer program, and I fell in love with both the campus and the city</span></p>
+					<i class="fa fa-arrow-down fa-4x arrow-white section-columbia-arrow" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
 				</div>
 			</div>
 			<div class="section" id="section-taxis">
@@ -65,15 +65,15 @@
 				<div class="section-travel-wrapper">
 					<h1><span style="color: #6797E9; background-color: white; padding: 0px 5px;">because</span> I take Columbia with me wherever I go</h1>
 					<p class="section-travel-description">I take every chance I get to travel and see new parts of the world. Not only because I like to see new places, but mostly because I value the change in perspective traveling affords me. Every time I step out of an airplane coming from some formerly unknown land, I think and feel ever so slightly different.</p>
-					<p class="section-travel-description"> That's the kind of college exeprience I want and know Columbia can offer me.</p>
-					<p class="section-travel-footer">Here I'm standing in front on the imperial palace in Tokyo, Japan on the 15th of April 2017</p>
+					<p class="section-travel-description"> That's the kind of college exeprience I want and know Columbia can offer me, with its remarkably multicultural location and student body.</p>
+					<p class="section-travel-footer"><a href="https://goo.gl/HWHgcg" target="_blank">Here</a> I'm standing in front of the imperial palace in Tokyo, Japan on the 15th of April 2017</p>
 					<i class="fa fa-arrow-down fa-4x section-travel-arrow" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
 				</div>
 			</div>
 			<div class="section" id="section-site">
 				<div class="section-site-wrapper">
 					<h1><span style="color: #B42A43; background-color: white; padding: 0px 5px;">because</span> I care</h1>
-					<p>I spent all of my free time since I was placed on Columbia's waitlist putting together this website from scratch. Why? Because to me Columbia is not just a place to be, it's the place I want to be. This site is my own way to prove I sincerely care about having a Columbia education, and that I'm highly motivated to reach for it.</p>
+					<p>I spent most of my free time since I was placed on Columbia's waitlist putting together this website from scratch. Why? Because to me Columbia is not just a place to be, it's the place I want to be. This site is my own way to prove I sincerely care about having a Columbia education, and that I'm highly motivated to reach for it.</p>
 					<i class="fa fa-arrow-down fa-4x section-site-arrow-down" aria-hidden="true" onclick="$.fn.fullpage.moveSectionDown();"></i>
 				</div>
 			</div>
@@ -93,13 +93,19 @@
 			</div>
 		</div>
 	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		if (window.location.host.search("localhost") == -1) {
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-97726002-1', 'auto');
-		ga('send', 'pageview');
+			ga('create', 'UA-97726002-1', 'auto');
+			ga('send', 'pageview');
+
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', "https://maker.ifttt.com/trigger/new_visit/with/key/buKMasUlmJA1ngp_M-TdXR", true);
+			xhr.send();
+		}
 	</script>
 	</body>
 </html>
