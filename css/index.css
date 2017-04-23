@@ -403,13 +403,13 @@ body{
 .section-finale-wrapper h1 {
     color: white;
     font-size: 17vmin;
-    padding: 0% 10%;
+    padding: 2% 10%;
 }
 
 .section-finale-wrapper p {
     color: rgba(255,255,255,0.7);
     font-size: 4vmin;
-    padding: 3% 10%;
+    padding: 1% 10%;
 }
 
 .section-finale-footer {
