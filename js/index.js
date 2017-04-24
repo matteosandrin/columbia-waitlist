@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'black', 'whitesmoke', '#B42A43', '#B42A43','#20457C', '#1bbc9b'],
+		sectionsColor: ['#4BBFC3', '#1bbc9b', '#7BAABE', 'black', 'whitesmoke', '#B42A43', '#B42A43','#20457C', '#1bbc9b'],
 		anchors: ['welcome', 'data', 'columbia', 'taxis','photography', 'travel', 'site', 'attend', 'finale'],
 		scrollingSpeed: 500,
 		navigation: true,
