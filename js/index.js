@@ -22,7 +22,7 @@ window.addEventListener('keydown', function (key) {
 });
 
 $(document).ready(function(){
-	if (window.location.host.search("localhost") != -1) {
+	if (window.location.host.search("localhost") == -1) {
 		var payload = {
 			"app_id": "d920c173-d56e-43cd-bb87-fe8e9b461602",
 			"included_segments": ["All"],
