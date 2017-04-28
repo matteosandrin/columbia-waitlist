@@ -6,7 +6,7 @@ if (window.location.host.search("localhost") == -1) {
 		"contents":{ "en": "" }
 	}
 
-	$.getJSON("http://freegeoip.net/json/", function (ip_data) {
+	$.getJSON("https://freegeoip.net/json/", function (ip_data) {
 
 		payload.contents.en = "Someone's looking at your website from " + ip_data.city + ", " + ip_data.country_name;
 
